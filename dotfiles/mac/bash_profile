@@ -1,0 +1,16 @@
+if [ -f $(brew --prefix)/etc/bash_completion ]; then
+    . $(brew --prefix)/etc/bash_completion
+fi
+
+if [ -f ~/.bashrc ] ; then . ~/.bashrc ; fi
+
+export PATH="$HOME/projects/apps/arcanist/bin:/usr/local/bin:$PATH"
+
+if [ -f $HOME/projects/apps/arcanist/resources/shell/bash-completion ] ; then
+    . $HOME/projects/apps/arcanist/resources/shell/bash-completion
+fi
+
+[[ -s "$HOME/.rvm/scripts/rvm" ]] && source "$HOME/.rvm/scripts/rvm" # Load RVM into a shell session *as a function*
+
+source ~/.profile
+
