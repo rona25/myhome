@@ -2,6 +2,10 @@ if [ -f $(brew --prefix)/etc/bash_completion ]; then
     . $(brew --prefix)/etc/bash_completion
 fi
 
+export GITAWAREPROMPT=~/bin/git-aware-prompt
+source "${GITAWAREPROMPT}/main.sh"
+
+if [ -f ~/.bash_aliases ] ; then . ~/.bash_aliases ; fi
 if [ -f ~/.bashrc ] ; then . ~/.bashrc ; fi
 
 export PATH="$HOME/projects/apps/arcanist/bin:/usr/local/bin:$PATH"
